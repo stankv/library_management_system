@@ -28,9 +28,6 @@ class TestSearchBook(unittest.TestCase):
 
     def test_search_book_by_id(self):
         """Проверяет поиск книги по id"""
-        self.library.add_book('Война и мир', 'Л.Н. Толстой', '1868')
-        self.library.add_book('Три товарища', 'Э.М. Ремарк', '1936')
-        self.library.add_book('Морской волк', 'Дж. Лондон', '1904')
         self.assertEqual(self.library.search_book_by_id('2').id, 2)
         self.assertEqual(self.library.search_book_by_id('2').title, 'Три товарища')
         self.assertEqual(self.library.search_book_by_id('2').author, 'Э.М. Ремарк')
