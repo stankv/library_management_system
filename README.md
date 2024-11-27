@@ -62,30 +62,30 @@
 ### Запуск программы
 Запустите основной файл main.py, чтобы начать работу с программой:
 
-    `python main.py`
+`python main.py`
 
 
 ### Тестирование
 Чтобы запустить все тесты, выполните команду в консоли:
 
-    `python -m unittest discover Tests`
+`python -m unittest discover Tests`
 
 Проверка покрытия тестами:
 
 1. Установите утилиту **coverage** (если она не установлена):
 
-    `pip install coverage`
+`pip install coverage`
 
 2. Запустите покрытие:
 
-    `coverage run -m unittest discover Tests`
+`coverage run -m unittest discover Tests`
 
 3. Создание и просмотр отчета:
 
-    `coverage report`
+`coverage report`
 
 4. Создание HTML-отчёта (в папке проекта появится каталог **htmlcov**:
 
-    `coverage html`
+`coverage html`
 
 5. В каталоге **htmlcov** файл с отчетом - index.html
