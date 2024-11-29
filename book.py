@@ -43,8 +43,10 @@ class Book:
         return self.__id
 
     @id.setter
-    def id(self, id):
-        self.__id = id
+    def id(self, value):
+        if int(value) < 1:
+            raise ValueError("ID must be greater than or equal to 1")
+        self.__id = value
 
     @property
     def title(self):
