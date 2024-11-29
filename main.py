@@ -1,7 +1,7 @@
 from os import system
 from book import Book
 from library import Library
-import sys
+#import sys
 #sys.stdout.reconfigure(encoding='ansi')    # раскомментировать если не отображается кириллица
 
 system('cls')

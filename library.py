@@ -24,7 +24,7 @@ class Library:
             __validate_entered_year(year: str): validates the entered year
             __validate_entered_author(author: str): validates the entered author
     """
-    def __init__(self, file_db="books_db.txt"):
+    def __init__(self, file_db: str="books_db.txt"):
         """"
         Constructor of the Library class.
 
@@ -95,7 +95,7 @@ class Library:
 
         :return: (Book) Book object or None
 
-        :param id_book: (str) Id of the book
+        :param id_book: (str) ID of the book
         """
         if self.__validate_entered_id(id_book) > 0:
             for book in self.books:

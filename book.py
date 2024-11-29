@@ -86,7 +86,7 @@ class Book:
         return f"{self.id} Title: {self.title}, Author: {self.author}, Year: {self.year}, Status: {view_status}"
 
     def __repr__(self):
-        return f"Title: {self.title}, Author: {self.author}, Year: {self.year}, Available: {self.status}"
+        return f"title={self.title}, author={self.author}, year={self.year}, status={self.status}"
 
     def __eq__(self, other):
         return self.title == other.title and self.author == other.author and self.year == other.year
