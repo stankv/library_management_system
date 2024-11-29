@@ -3,11 +3,11 @@ class Book:
     The class representing the book.
 
     Attributes:
-        id (int): ID of the book
-        title (str): Title of the book
-        author (str): Author of the book
-        year (int): Year of publication
-        status (int): Status of the book (1 = available, 0 = not available)
+        __id (int): ID of the book
+        __title (str): Title of the book
+        __author (str): Author of the book
+        __year (int): Year of publication
+        __status (int): Status of the book (1 = available, 0 = not available)
 
     Methods:
         switch_status_book(): Switch the status of the book
@@ -23,11 +23,11 @@ class Book:
             year (int): Year of publication
             status (int): Status of the book (1 = available, 0 = was given)
         """
-        self.id: int = id
-        self.title: str = title
-        self.author: str= author
-        self.year: int = year
-        self.status: int = status
+        self.__id: int = id
+        self.__title: str = title
+        self.__author: str= author
+        self.__year: int = year
+        self.__status: int = status
 
     def switch_status_book(self):
         """
@@ -37,6 +37,46 @@ class Book:
             None
         """
         self.status = 1 - int(self.status)
+
+    @property
+    def id(self):
+        return self.__id
+
+    @id.setter
+    def id(self, id):
+        self.__id = id
+
+    @property
+    def title(self):
+        return self.__title
+
+    @title.setter
+    def title(self, title):
+        self.__title = title
+
+    @property
+    def author(self):
+        return self.__author
+
+    @author.setter
+    def author(self, author):
+        self.__author = author
+
+    @property
+    def year(self):
+        return self.__year
+
+    @year.setter
+    def year(self, year):
+        self.__year = year
+
+    @property
+    def status(self):
+        return self.__status
+
+    @status.setter
+    def status(self, status):
+        self.__status = status
 
     def __str__(self):
         if int(self.status) == 1:
